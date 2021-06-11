@@ -17,8 +17,11 @@ class HomeController extends Controller
     public function movies(){
 
         $movies = Movie::all();
+        // dd($movies);
+        $data = [
+            'movies' => $movies
+        ];
 
-        dd($movies);
-        return view('movie');
+        return view('movie', $data);
     }
 }

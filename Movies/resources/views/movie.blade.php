@@ -7,8 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
-        cuiaio
-    </h1>
+    <ul>
+        @foreach ($movies as $item)
+            <li>
+                {{ $item['title'] }}
+            </li>
+            <li>
+                {{ $item['original_title'] }}
+            </li>
+            <li>
+                {{ $item['nationality'] }}
+            </li>
+            <li>
+                {{ $item['date'] }}
+            </li>
+            <li>
+                {{ $item['vote'] }}
+            </li>
+        @endforeach
+    </ul>
 </body>
 </html>
