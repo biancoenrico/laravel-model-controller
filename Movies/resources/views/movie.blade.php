@@ -19,7 +19,8 @@
                 {{ $item['nationality'] }}
             </li>
             <li>
-                {{ $item['date'] }}
+                {{ date('d/F/Y', strtotime($item['date'])) }}
+
             </li>
             <li>
                 {{ $item['vote'] }}
